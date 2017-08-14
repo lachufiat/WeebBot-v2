@@ -103,6 +103,6 @@ client.setInterval(async () => {
     } catch (err) {
         console.error(err);
     }
-}, 50000, client);
+}, 1000, client);
 
 client.login(config.token);
