@@ -87,7 +87,7 @@ client.setInterval(async () => {
 
                 let time = moment(data[0]["when"]);
                 let string = `:watch:**IN 40 MINUTES:** (${time.format("HH:mm")} JST)\n${format.join('\n')}`;
-                
+                /*That time cannot return the JST*/
                 if (channel.type == "text" && channel.permissionsFor(client.user).has("SEND_MESSAGES") && channel.permissionsFor(client.user).has("READ_MESSAGES") && guild[1].available) {
                     try {
                         await client.channels.get(settings['channel']).send(string);
